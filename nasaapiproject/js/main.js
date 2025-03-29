@@ -6,6 +6,7 @@ function getPictureOfDay() {
    fetch(url)
       .then(resp => resp.json())
       .then(data => {
+         console.log(data);
          document.querySelector('h2').innerText = data.title
          if (data.media_type === 'image') {
             document.querySelector('img').src = data.hdurl
